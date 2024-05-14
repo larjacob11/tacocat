@@ -5,9 +5,9 @@ on:
   push:
     branches:
       - main
-  paths:
-    - '**.tf'
-    - 'prod.tfvars'
+    paths:
+      - '**.tf'
+      - 'prod.tfvars'
 
 env:
   TF_LOG: INFO
@@ -18,7 +18,7 @@ env:
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ENVIRONMENT: prod
-  
+
 jobs:
   terraform:
     name: 'Terraform Apply on Push'
